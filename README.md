@@ -87,4 +87,5 @@ SSH into the control node and follow the steps below:
 - Copy the contents of the files directory into /etc/ansible/files
 - Update the *hosts* file to include *the private ip addresses of the webservers and the elk server*.
 - Update the ansible.cfg file so that remote_user= is set to a user with ssh access to the ELK server and webservers.
+-Update filebeat-configuration.yml and metricbeat-configuration.yml in the /etc/ansible/files directory so hosts: under elasticsearch and kibana have the ELK stack's ip address. See filebeat and metric beat's website for more detailed instructions.
 - Run the playbook with *ansible-playbook project1-playbook.yml*, and navigate to *http://[ELK server IP address]:5601* to check that the installation worked as expected.
