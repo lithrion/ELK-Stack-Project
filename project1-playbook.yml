@@ -1,0 +1,12 @@
+---
+- hosts: elkservers
+  become: true
+  roles:
+    - elk
+
+- hosts: webservers                                                                                                                           
+  become: true                                                                                                                                
+  roles:                                                                                                                                      
+    - web_server                                                                                                                              
+    - filebeats                                                                                                                               
+    - metricbeats
